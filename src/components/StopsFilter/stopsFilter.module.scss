@@ -1,0 +1,64 @@
+@import '../../vars.scss';
+
+.filterBlock {
+  width: 232px;
+  padding: 15px 20px 10px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #FFF;
+  align-self: flex-start;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.filterList {
+  list-style: none;
+  padding: 0;
+}
+
+.checkbox {
+  display: none;
+}
+
+.label {
+  position: relative;
+  padding: 10px 50px;
+  display: block;
+  margin: 0 -20px;
+  transition: all .3s ease-in;
+  cursor: pointer;
+  &::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #9ABBCE;
+    border-radius: 2px;
+    position: absolute;
+    top: 7px;
+    left: 20px;
+  }
+  &:hover {
+    background-color: $hoverColor;
+  }
+}
+
+.checkbox:checked ~ .label::after {
+  border: 2px solid $accentColor;
+}
+
+.checkbox:checked ~ .label::before {
+  content: "";
+  background-image: url('../../../public/img/check.svg');
+  position: absolute;
+  display: block;
+  width: 12px;
+  height: 8px;
+  left: 25px;
+  top: 15px;
+}

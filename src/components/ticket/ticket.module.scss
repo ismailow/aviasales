@@ -1,0 +1,51 @@
+@import '../../vars.scss';
+
+.ticket {
+  width: 100%;
+  background-color: #fff;
+  padding: 22px 20px 8px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 600;
+  color: $accentColor;
+}
+
+.logo {
+  width: 110px;
+  height: 36px;
+}
+
+.flightInfo {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.infoItem {
+  width: 140px;
+}
+
+.infoTitle {
+  color: $greyColor;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+.infoDescr {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 600;
+}

@@ -1,0 +1,58 @@
+@import '../../vars.scss'; 
+
+.app {
+  max-width: 754px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.appTitle {
+  text-align: center;
+}
+
+.column {
+  display: flex;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.ticketsList {
+  position: relative;
+  flex: 1 1 auto;
+}
+
+.loadMoreBtn {
+  width: 100%;
+  background-color: $accentColor;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  padding: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all .3s ease-in;
+  &:hover {
+    background-color: $accentColorHover;
+  }
+}
+
+.filterError {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: #fff;
+  border: 1px solid $greyColor;
+  border-radius: 6px;
+  padding: 10px 15px;
+}

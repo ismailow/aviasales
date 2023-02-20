@@ -1,0 +1,25 @@
+@import '../../vars.scss';
+
+.error {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid $greyColor;
+  text-align: center;
+  border-radius: 6px;
+  padding: 20px 10px;
+  margin: 30px auto;
+}
+
+.button {
+  background-color: $accentColor;
+  border: none;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all .3s ease-in;
+  &:hover {
+    background-color: $accentColorHover;
+  }
+}
