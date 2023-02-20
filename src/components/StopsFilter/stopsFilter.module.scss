@@ -21,6 +21,16 @@
   padding: 0;
 }
 
+@media (max-width: 767px) {
+  .filterBlock {
+    width: 100%;
+  }
+  .filterList {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 .checkbox {
   display: none;
 }
@@ -61,4 +71,10 @@
   height: 8px;
   left: 25px;
   top: 15px;
+}
+
+@media (max-width: 400px) {
+  .filterList {
+    flex-direction: column;
+  }
 }

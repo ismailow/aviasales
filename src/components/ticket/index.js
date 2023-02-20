@@ -70,75 +70,33 @@ function Ticket(props) {
         />
       </div>
       <div>
-        {segments.map((item) => (
-          <div
-            key={item.date}
-            className={styles.flightInfo}
-          >
-            <div className={styles.infoItem}>
-              <div className={styles.infoTitle}>
-                {item.origin} – {item.destination}
-              </div>
-              <div className={styles.infoDescr}>
-                {/* 10:45 – 08:00 */}
-                {formatFlightTime(item.date, item.duration)}
-              </div>
-            </div>
-            <div className={styles.infoItem}>
+        <div className={styles.destinationBlock}>
+          {segments.map((item) => (
+            <div
+              key={item.date}
+              className={styles.flightInfo}
+            >
               <div className={styles.infoItem}>
-                <div className={styles.infoTitle}>В пути</div>
-                <div className={styles.infoDescr}>
-                  {/* 21ч 15м */}
-                  {formatFlightDuration(item.duration)}
+                <div className={styles.infoTitle}>
+                  {item.origin} – {item.destination}
+                </div>
+                <div className={styles.infoDescr}>{formatFlightTime(item.date, item.duration)}</div>
+              </div>
+              <div className={styles.infoItem}>
+                <div className={styles.infoItem}>
+                  <div className={styles.infoTitle}>В пути</div>
+                  <div className={styles.infoDescr}>{formatFlightDuration(item.duration)}</div>
+                </div>
+              </div>
+              <div className={styles.infoItem}>
+                <div className={styles.infoItem}>
+                  <div className={styles.infoTitle}>{transfersTitile(item.stops.length)}</div>
+                  <div className={styles.infoDescr}>{item.stops.join(', ')}</div>
                 </div>
               </div>
             </div>
-            <div className={styles.infoItem}>
-              <div className={styles.infoItem}>
-                <div className={styles.infoTitle}>{transfersTitile(item.stops.length)}</div>
-                <div className={styles.infoDescr}>{item.stops.join(', ')}</div>
-              </div>
-            </div>
-          </div>
-        ))}
-        {/* <div className={styles.flightInfo}>
-          <div className={styles.infoItem}>
-            <div className={styles.infoTitle}>
-              {firstFlightOrigin} – {firstFlightDestination}
-            </div>
-            <div className={styles.infoDescr}>10:45 – 08:00</div>
-          </div>
-          <div className={styles.infoItem}>
-            <div className={styles.infoItem}>
-              <div className={styles.infoTitle}>В пути</div>
-              <div className={styles.infoDescr}>21ч 15м</div>
-            </div>
-          </div>
-          <div className={styles.infoItem}>
-            <div className={styles.infoItem}>
-              <div className={styles.infoTitle}>MOW – HKT</div>
-              <div className={styles.infoDescr}>HKG, JNB</div>
-            </div>
-          </div>
+          ))}
         </div>
-        <div className={styles.flightInfo}>
-          <div className={styles.infoItem}>
-            <div className={styles.infoTitle}>MOW – HKT</div>
-            <div className={styles.infoDescr}>11:20 – 00:50</div>
-          </div>
-          <div className={styles.infoItem}>
-            <div className={styles.infoItem}>
-              <div className={styles.infoTitle}>В пути</div>
-              <div className={styles.infoDescr}>13ч 30м</div>
-            </div>
-          </div>
-          <div className={styles.infoItem}>
-            <div className={styles.infoItem}>
-              <div className={styles.infoTitle}>MOW – HKT</div>
-              <div className={styles.infoDescr}>HKG</div>
-            </div>
-          </div>
-        </div> */}
       </div>
     </div>
   );

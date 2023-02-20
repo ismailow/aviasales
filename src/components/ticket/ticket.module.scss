@@ -49,3 +49,22 @@
   line-height: 21px;
   font-weight: 600;
 }
+
+@media (max-width: 485px) {
+  .flightInfo {
+    gap: 10px;
+  }
+  .infoItem {
+    width: 110px;
+  }
+}
+
+@media (max-width: 420px) {
+  .flightInfo {
+    flex-direction: column;
+  }
+  .destinationBlock {
+    display: flex;
+    justify-content: space-between;
+  }
+}
